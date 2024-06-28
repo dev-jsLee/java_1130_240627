@@ -1,0 +1,18 @@
+package day01;
+
+public class VariableTest {
+
+	public static void main(String[] args) {
+		System.out.println("Hello, world.");
+		// 출력문을 작성하는 이유
+		// 코드를 쓰는 중간에 오류의 위치나 값을 확인하기 위해
+		
+		// int, long
+		// float, double
+		// char, String
+		
+		
+
+	}
+
+}

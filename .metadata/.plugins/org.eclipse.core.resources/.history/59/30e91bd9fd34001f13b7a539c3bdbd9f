@@ -1,0 +1,26 @@
+package day01;
+
+public class PrintTest {
+
+	public static void main(String[] args) {
+		System.out.println("안녕1");
+		System.out.println("안녕2");
+		// 출력하고자 하는 값을 넣으면
+		// 출력될 문장 끝에 줄바꿈 되어 출력된다.
+		
+		System.out.print("안녕3.");
+		System.out.print("안녕4.");
+		
+		System.out.println(); // 줄바꿈만
+		
+//		===============================
+		System.out.printf(""); // format의 앞글자 f
+		
+		int num1 = 10;
+		System.out.printf("num1 is %d", num1);
+		
+		
+
+	}
+
+}

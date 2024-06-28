@@ -1,0 +1,46 @@
+package day01;
+
+public class OperatorTest {
+
+	public static void main(String[] args) {
+		// +, -, *, /, %
+		int num1 = 10;
+		int num2 = num1 + 1;
+		System.out.println(num2);		// 11
+		System.out.println(num2 - num1);// 1
+		System.out.println(num1 * num2);// 110
+		System.out.println(1 / 10);		// 1/10 => 0
+		// 정수:정수 연산 시, 결과는 정수로 나온다.
+		System.out.println(10 % 3);		// 1?
+		System.out.println("==============");
+//		System.out.println(1.0 / 10);	// 0.1
+//		System.out.println((float)1 / 10);	// 0.1
+		System.out.println((float)(1 / 10)); // 0.0
+		// 실수:정수 연산 시, 더 큰 범위인 실수로 나온다.
+		
+		// 결론
+		// 같은 실수끼리 혹은 정수끼리 연산했을 시, 결과값은 그 타입 그대로 나온다.
+		// 실수와 정수 연산 시, 실수로 나온다.
+		
+		// ===============================
+		// 관계 연산자
+		// 관계 연산자는 그 결과가 항상 true 혹은 false로 나온다.
+		// == 같다
+		System.out.println(1 == 1);
+		
+		// != 같지 않다
+		
+		// >< 초과, 미만(포함x)
+		
+		// >= <= 이상, 이하(포함)
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

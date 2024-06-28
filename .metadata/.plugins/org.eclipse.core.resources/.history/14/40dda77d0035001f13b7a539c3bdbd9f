@@ -1,0 +1,27 @@
+package day01;
+
+import java.util.Scanner;
+
+public class ScannerTest {
+
+	public static void main(String[] args) {
+		// 입력 메서드
+		// ctrl + shift + O
+		Scanner sc = new Scanner(System.in);
+		System.out.print("입력: ");
+		String inputStr = sc.next(); // 띄어쓰기 혹은 반점(,)을 구분자로 하여 입력받는다.
+		System.out.println(inputStr);
+		
+		inputStr = sc.next(); 
+		System.out.println(inputStr);
+		
+		inputStr = sc.next();
+		System.out.println(inputStr);
+		
+		inputStr = sc.next();
+		System.out.println(inputStr);
+		
+
+	}
+
+}

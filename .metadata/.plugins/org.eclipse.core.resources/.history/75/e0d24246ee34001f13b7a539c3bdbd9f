@@ -1,0 +1,15 @@
+package day01;
+
+public class TestTri {
+
+	public static void main(String[] args) {
+		int bigger = 5 > 3 ? 5 : 3;
+		
+		
+		
+		
+		
+		
+	}
+
+}
