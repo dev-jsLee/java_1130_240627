@@ -1,6 +1,6 @@
-package day01;
+package day02;
 
-public class VariableTest {
+public class Test {
 
 	public static void main(String[] args) {
 		
@@ -8,7 +8,7 @@ public class VariableTest {
 		
 		
 		
-
+		
 	}
 
 }
