@@ -2,7 +2,7 @@ package solution.codingDojang;
 
 import java.util.Scanner;
 
-public class Solution465 {
+public class Solution465strZip {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);

@@ -3,7 +3,7 @@ package solution.codingDojang;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Solution711 {
+public class Solution711upDown {
 
 	public static void main(String[] args) {
 		/*
