@@ -10,7 +10,6 @@ public class TestTrans {
 		int[] strToCharArr = "1234".chars().toArray();
 //		strToCharArr.forEach((e)->{System.out.print((char)e + " ");});
 		
-		
 	}
 
 }
