@@ -1,7 +1,5 @@
 package testCode;
 
-import java.util.stream.IntStream;
-
 public class TestTrans {
 
 	public static void main(String[] args) {
@@ -9,8 +7,10 @@ public class TestTrans {
 		System.out.println(strToDouble);
 		
 		char strToChar = "?".charAt(0);
-		IntStream strToCharArr = "1234".chars();
-		strToCharArr.forEach((e)->{System.out.print((char)e + " ");});
+		int[] strToCharArr = "1234".chars().toArray();
+//		strToCharArr.forEach((e)->{System.out.print((char)e + " ");});
+		
+		
 	}
 
 }
