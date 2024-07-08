@@ -23,12 +23,17 @@ public class Solution504countChar {
 			String strI = i + "";
 //			String strI = String.valueOf(i);
 			for (String e : strI.split("")) {
+				// 문자열의 .charAt(n)메서드를 사용하면 n(0<=n)번째 문자를 추출해 반환한다.
 				// 문자 '0'에서 문자 '0'을 빼면 숫자 0이 된다.
 				int current = (int) (e.charAt(0) - '0');
+				// 문자 '0'은 arrTimes[0]
+				// 문자 '1'은 arrTimes[1]
+				// ... 해당되는 값을 1 추가하는 코드
 				arrTimes[current]++;
 //				System.out.println(current + ": " + arrTimes[current]);
 			}
 		}
+		
 		for (int i = 0; i < arrTimes.length; i++) {
 			System.out.println(i + ":" + arrTimes[i]);
 		}
