@@ -1,5 +1,7 @@
 package practice;
 
+import java.util.Scanner;
+
 public class Calculator {
 	// 계산기
 	// 기능?
@@ -147,7 +149,65 @@ public class Calculator {
 		System.out.println("===============");
 		
 		// 문자열 계산기
-		System.out.println(cal.calculate("30 * 10 + 3 - 2"));
+//		System.out.println(cal.calculate());
+		
+		// 앞에서부터 순서대로만 계산
+		Scanner sc = new Scanner(System.in);
+
+		// 첫번째로 입력하거나
+		// 이전 계산의 결과를 담아둘 변수
+		int inputNum = 0;
+		
+		// 반복의 횟수를 모른다.
+		// -> 무한히 입력을 받는다
+		while(true) {
+			/* 1. 숫자를 입력 받는다
+			 * 2. 계산할 두번째 숫자를 입력 받는다
+			 * 3. 연산자 입력 받는다
+			 * 4. 계산식에 넣는다.
+			 * 5. 결과값을 받는다.
+			 * 6. 결과값을 다음 계산의 첫번째 숫자로 취급한다.
+			 * */
+			
+			// 첫 입력인 경우
+			if(inputNum == 0) { // 초기값인지 검사한다.
+				System.out.print("입력(숫자) :");
+				// 1. 숫자를 입력 받는다
+				inputNum = Integer.parseInt(sc.nextLine().strip());
+				System.out.println(); // 줄바꿈
+			}
+			
+//			2. 계산할 두번째 숫자를 입력 받는다
+			System.out.print("입력(숫자) :");
+			// 입력된 값이 esc이면 프로그램 종료
+			String inputStr = sc.nextLine()
+					.strip(); // strip은 문자열 양끝의 빈문자열이나
+			// 줄바꿈을 없애주는 메서드다
+			if(inputStr.equals("esc")) {
+				System.out.println("프로그램 종료");
+				break;
+			}
+			int inputNum2 = Integer.parseInt(inputStr);
+			
+//			3. 연산자 입력 받는다.
+			System.out.print("입력(연산자) :");
+			String inputOper = sc.nextLine().strip();
+			
+//			4. 계산식에 넣는다.
+			// 입력받은 연산자에 따라서
+			// 연산해야 할 내용이 달라진다
+			// 연산자를 구분해야 한다.
+			// -> 미리 만들어놓은 메서드를 활용한다.
+//			5. 결과값을 받는다.
+			int result = cal.calculate(inputNum + " " + inputOper + " " + inputNum2);
+			
+//			6. 결과값을 다음 계산의 첫번째 숫자로 취급한다.
+			inputNum = result;
+			System.out.println("계산된 결과는 :" + result);
+			System.out.println("===================");
+		}
+		
+		
 
 	}
 
