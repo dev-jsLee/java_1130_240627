@@ -1,6 +1,6 @@
 package solution.codingDojang;
 
-public class Solution504 {
+public class Solution504countChar {
 
 	public static void main(String[] args) {
 		// 1~1000에서 각 숫자의 개수 구하기
@@ -17,9 +17,12 @@ public class Solution504 {
 		int start = 1; // 시작값
 		int end = 1000; // 끝값
 		// 0~9 숫자마다의 개수를 담을 배열 선언
+		// 모든 요소는 초기값 0으로 설정된다.
 		int[] arrTimes = new int[10];
 		for (int i = start; i <= end; i++) {
-			for (String e : String.valueOf(i).split("")) {
+			String strI = i + "";
+//			String strI = String.valueOf(i);
+			for (String e : strI.split("")) {
 				// 문자 '0'에서 문자 '0'을 빼면 숫자 0이 된다.
 				int current = (int) (e.charAt(0) - '0');
 				arrTimes[current]++;

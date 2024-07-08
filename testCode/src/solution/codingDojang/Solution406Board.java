@@ -1,6 +1,6 @@
 package solution.codingDojang;
 
-public class Solution406 {
+public class Solution406Board {
 
 	public static void main(String[] args) {
 //		A씨는 게시판 프로그램을 작성하고 있다.
