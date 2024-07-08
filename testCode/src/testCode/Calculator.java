@@ -1,8 +1,8 @@
-package practice;
+package testCode;
 
-public class Calculator2 extends Calculator{
 
-	@Override
+public class Calculator{
+
 	public int calculate(String expression) {
 		// "- 3 + 4 - 2"
 		int result = 0;
@@ -45,7 +45,6 @@ public class Calculator2 extends Calculator{
 
 	}
 	
-	@Override
 	public int division(int num1, int num2) {
 		try {
 			return num1/num2;
@@ -57,7 +56,7 @@ public class Calculator2 extends Calculator{
 
 	public static void main(String[] args) {
 		Calculator cal = new Calculator();
-		System.out.println(cal.calculate("3 - 5 * 2"));
+		System.out.println(cal.calculate("3 + 5"));
 	}
 
 }
