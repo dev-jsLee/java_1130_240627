@@ -44,12 +44,7 @@ public class Solution711upDown {
 				System.out.printf("%d번째 시도\n", ++times);
 				// 사용자 입력
 				System.out.print("입력 : ");
-				try {
-					input = sc.nextInt();
-				}catch (Exception e) {
-					flag = true;
-					break;
-				}
+				input = sc.nextInt();
 				if (input < 0) {
 					flag = true;
 					break;

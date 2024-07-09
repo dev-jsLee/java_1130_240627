@@ -9,7 +9,7 @@ public class RandomTask {
 		// 변화하는 시간 값을 이용해서 무작위 값을 반환하는 매커니즘이다
 		Random r = new Random();
 		System.out.println(r.nextInt());
-		System.out.println(r.nextInt(100));
+		System.out.println(r.nextInt(100)); // 0~99 범위의 랜덤값
 		
 		
 		

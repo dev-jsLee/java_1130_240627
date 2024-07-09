@@ -24,7 +24,7 @@ public class Solution406Board {
 		int[] test_m = { 0, 1, 2, 1, 10, 11 };
 //		한페이지에 보여줄 게시물수(n) (단 n은 1보다 크거나 같다. n >= 1)
 		int[] test_n = { 1, 1, 1, 10, 10, 10 };
-//		출력 : 총페이지수
+//		출력 : 총페이지수(p)
 		int[] test_p = { 0, 1, 2, 1, 1, 2 };
 
 		for (int i = 0; i < test_p.length; i++) {
