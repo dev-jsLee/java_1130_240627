@@ -2,7 +2,7 @@ package com.task;
 
 import java.util.Scanner;
 
-public class ForTask {
+public class TaskFor {
 
 	public static void main(String[] args) {
 		// while문과 다르게 반복할 횟수가 정해지거나
