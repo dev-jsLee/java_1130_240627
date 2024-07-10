@@ -1,10 +1,18 @@
 package com.task.random;
 
 import java.util.Random;
+import java.util.Scanner;
 
 public class Lotto {
-	// 1~45
-	// 6개를 컴퓨터가 랜덤으로 중복X 따로 뽑는다
+	// 0. 1~45
+	// 1. 6개를 컴퓨터가 랜덤으로 중복X 따로 뽑는다
+	// 2. 사용자가 6자리 값을 입력하면 당첨여부를 출력하는 메서드 구현
+	// 1등 : 6개 번호가 모두 맞았을 경우,
+	// 2등 : 5개의 번호가 맞고, 나머지 1개는 보너스번호랑 일치 할경우
+	// 3등 : 5개의 번호가 맞고, 나머지 1개는 보너스번호랑 일치하지 않을 경우 
+	// 4등 : 4개의 번호가 일치할 경우
+	// 5등 : 3개의 번호가 일치할 경우
+	// 꽝!
 	// 1회, 2회,...마다 번호가 다르게 뽑혀야 된다
 	// 현재 회차 도전 || 다음 회차 도전
 	// 이전 회차에 도전X
@@ -33,10 +41,30 @@ public class Lotto {
 	
 	// 로또 번호를 세팅하는 메서드
 	public static void setLotto() {
-		int[] madeLotto = new int[6]; // 0이 모든 요소에 초기화
+		// 숫자 값을 배열에 중복없이 세팅하는 메서드를
+		// "분리"
+		int[] madeLotto = noDuplicate(true);
 		
+		System.out.println("=====세팅 완료=====");
+		for (int i : madeLotto) {
+			System.out.println(i);
+		}
+		lotto = madeLotto;
+	}
+	
+	
+	// - 사용자의 입력을 받아서 숫자 배열을 채우는 방식
+	// - 랜덤함수를 이용해서 랜덤값을 숫자 배열에 채우는 방식
+	public static int[] noDuplicate(boolean isRandom) {
 		// r.nextInt(); // int 범위 전체 대상으로 랜덤값 반환
 //		r.nextInt(45); // 1이상 45미만의 값이 랜덤으로 반환
+		int[] madeLotto = new int[6]; // 0이 모든 요소에 초기화
+		Scanner sc = null;
+		
+		// false라면 랜덤이 아니라 사용자의 입력을 받을 거다
+		if(isRandom == false) { 
+			sc = new Scanner(System.in);
+		}
 		
 		// 전체 반복은 6자리를 채우기 위한 반복
 		for (int i = 0; i < madeLotto.length; i++) {
@@ -46,8 +74,13 @@ public class Lotto {
 			int tempNum; // 랜덤 값을 임시로 담기 위한 변수 선언
 			
 			while(true) {
+				// 사용자 입력을 받을 경우 안내메시지 출력
+				if(isRandom == false) {
+					System.out.print(i+1 + "로또 번호 입력: ");
+				}
 				// 새로운 랜덤값을 받았다
-				tempNum = r.nextInt(45) + 1; // 0~44라서
+				// or 사용자의 입력을 받는다
+				tempNum = isRandom ? r.nextInt(45) + 1 : sc.nextInt(); // 0~44라서
 				// 1을 더해주어 1~45 범위로 바꿔준다
 				
 				// 이전에 값이 존재했는지 검사
@@ -71,18 +104,15 @@ public class Lotto {
 			// 중복이 아닌 랜덤값을 세팅해준다.
 			madeLotto[i] = tempNum;
 		}
-		System.out.println("=====세팅 완료=====");
-		for (int i : madeLotto) {
-			System.out.println(i);
-		}
-		lotto = madeLotto;
+		return madeLotto;
 	}
 	
 	/*
 	 * - 1 ~ 45사이의 번호 중
 	 * 중복되지 않는 6개의 번호를 선택하여 맞히는 게임입니다.
-	 * - 로또번호 : 6개의 번호와 1개의 보너스 번호를 가집니다.
-	 * - 보너스번호를 포함하여 각 번호는 중복되지 않습니다. 
+	 * - 로또번호 : 6개의 번호와
+	 *     심화+ 1개의 보너스 번호를 가집니다.
+	 *     심화+ 보너스번호를 포함하여 각 번호는 중복되지 않습니다. 
 	 * - 로또번호를 만들때에는 랜덤함수를 이용하여 만들어주세요. 
 	 * - 게임유저는 6개의 번호를 선택합니다.
 	 * - 유저가 선택한 각 번호는 중복되지 않습니다. 
